@@ -1,0 +1,6 @@
+C:\Suma\c#\Project-1\eMart\obj\Debug\eMart.csprojAssemblyReference.cache
+C:\Suma\c#\Project-1\eMart\bin\Debug\eMart.exe.config
+C:\Suma\c#\Project-1\eMart\bin\Debug\eMart.exe
+C:\Suma\c#\Project-1\eMart\bin\Debug\eMart.pdb
+C:\Suma\c#\Project-1\eMart\obj\Debug\eMart.exe
+C:\Suma\c#\Project-1\eMart\obj\Debug\eMart.pdb
