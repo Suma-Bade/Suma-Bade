@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "BuyerDashBoard";
+}
+
+<h1>BuyerDashBoard</h1>
+<h4 class="text-right text-primary"><a asp-action="LogOut" asp-controller="Buyer">LogOut </a></h4>
+<h4 class="text-right text-danger">Welcome @ViewBag.uname</h4>
+<h4 class="text-right text-danger">Last LogOut @ViewBag.lldt</h4>
+
