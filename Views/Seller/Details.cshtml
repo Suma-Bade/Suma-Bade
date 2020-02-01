@@ -1,0 +1,41 @@
+﻿@model EmartMVC.Models.Seller
+
+@{
+    ViewData["Title"] = "Details";
+    var photoPath = "~/Images/" + (Model.PhotoPath ?? "Panda.jpg");
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>@Model.Username</h1>
+                </div>
+
+                <div class="card-body text-center">
+                    <img class="card-img-top" src="@photoPath" asp-append-version="true" />
+
+                    <h4>Seller Mobileno : @Model.Mobileno</h4>
+                    <h4>Email : @Model.Email</h4>
+                    <h4>Compayname : @Model.Companyname</h4>
+                    <h4>Address:@Model.Address</h4>
+                    <h4>Website:@Model.Website</h4>
+                    <h4></h4>
+
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-controller="Seller" asp-action="DisplayItem" class="btn btn-primary"></a>
+                    <a asp-controller="Seller" asp-action="AddItem" class="btn btn-primary"></a>
+                    <a asp-controller="Seller" asp-action="AddCategory" class="btn btn-primary"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+</div>

@@ -85,15 +85,27 @@ namespace EmartMVC.Controllers
             return RedirectToAction("BuyerLogin");
         }
         // GET: CookieSession
-        public ActionResult Index()
+        public async Task<IActionResult> BuyerIndex()
         {
-            return View();
+            return View(await _context.Buyers.ToListAsync());
         }
 
         // GET: CookieSession/Details/5
-        public ActionResult Details(int bid)
+        public async Task<IActionResult> Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var buyer = await _context.Buyers
+                .FirstOrDefaultAsync(m => m.BId == id);
+            if (buyer == null)
+            {
+                return NotFound();
+            }
+
+            return View(buyer);
         }
 
         // GET: CookieSession/Create
@@ -111,7 +123,7 @@ namespace EmartMVC.Controllers
             {
                 // TODO: Add insert logic here
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(BuyerIndex));
             }
             catch
             {
@@ -165,7 +177,7 @@ namespace EmartMVC.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(BuyerIndex));
             }
             return View(buyer);
         }
@@ -199,7 +211,7 @@ namespace EmartMVC.Controllers
             var buyer = await _context.Buyers.FindAsync(bid);
             _context.Buyers.Remove(buyer);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(BuyerIndex));
         }
 
     }

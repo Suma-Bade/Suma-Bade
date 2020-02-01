@@ -24,6 +24,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Register
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Buyer" asp-action="RegisterBuyer">Buyer</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Seller" asp-action="RegisterSeller">Seller</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Login
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Buyer" asp-action="BuyerLogin">Buyer</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Seller" asp-action="SellerLogin">Seller</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
